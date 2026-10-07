@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct GeoTaggerApp: App {
+struct ApplePhotosUpdaterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
