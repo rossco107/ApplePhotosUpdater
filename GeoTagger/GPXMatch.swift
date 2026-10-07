@@ -1,10 +1,9 @@
 //
-//  GPXMatch 2.swift
+//  GPXMatch.swift
 //  GeoTagger
 //
 //  Created by Ross Carter on 19/09/2026.
 //
-
 
 import Foundation
 
@@ -64,10 +63,10 @@ final class GPXMatcher {
       }
     }
 
-    // Fallback: first subsequent point within one hour.
+    // Fallback: first subsequent point within two and a half hours.
     let difference = after.date.timeIntervalSince(date)
 
-    if difference >= 0 && difference <= 60 * 60 {
+    if difference >= 0 && difference <= 180 * 60 {
       return GPXMatch(
         latitude: after.latitude,
         longitude: after.longitude
